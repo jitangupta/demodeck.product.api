@@ -221,7 +221,6 @@ namespace Demodeck.Product.Api.Services
 
         public async Task<List<User>> GetUsersByTenantAsync(string tenantId)
         {
-            await Task.Delay(10); // Simulate async operation
             return _users.Where(u => u.TenantId == tenantId && u.IsActive).ToList();
         }
     }
