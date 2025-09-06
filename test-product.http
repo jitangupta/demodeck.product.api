@@ -1,0 +1,29 @@
+### Health Check
+GET https://localhost:5004/health
+
+### Get ACME Users (requires JWT token from Auth API)
+GET https://localhost:5004/acme/api/user
+Authorization: Bearer {{acme_jwt_token}}
+
+### Get GlobalX Users
+GET https://localhost:5004/globalx/api/user
+Authorization: Bearer {{globalx_jwt_token}}
+
+### Get Initech Users
+GET https://localhost:5004/initech/api/user
+Authorization: Bearer {{initech_jwt_token}}
+
+### Get Umbrella Users
+GET https://localhost:5004/umbrella/api/user
+Authorization: Bearer {{umbrella_jwt_token}}
+
+### Test Invalid Tenant Access (should return 403)
+GET https://localhost:5004/wrongtenant/api/user
+Authorization: Bearer {{acme_jwt_token}}
+
+### Test No Token (should return 401)
+GET https://localhost:5004/acme/api/user
+
+### Example with actual token (replace with real JWT from Auth API)
+GET https://localhost:5004/acme/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
