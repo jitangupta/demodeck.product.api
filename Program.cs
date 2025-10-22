@@ -79,6 +79,7 @@ namespace Demodeck.Product.Api
             // Register services
             builder.Services.AddScoped<ITenantContextService, TenantContextService>();
             builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
+            builder.Services.AddSingleton<ITaskRepository, InMemoryTaskRepository>();
 
             var app = builder.Build();
 
