@@ -7,6 +7,7 @@
     <UserSecretsId>5fc58dfe-f4d6-420c-b401-20944de261ad</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Demodeck.Product.Api.Tests\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
